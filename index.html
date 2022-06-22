@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap" rel="stylesheet">
+<meta charset="utf-8" />
+<title>Салон красоты Золушка</title>
+
+
+<style>
+body{
+background: url(images/background1.jpg);
+background-size: 3000%;
+
+ /* Меняется фон экрана, выбирается здесь */
+}
+
+
+.slider {
+position: relative;
+overflow: hidden;
+height: 80%;
+}
+
+.slider__wrapper {
+display: flex;
+transition: transform 0.6s ease;
+height: 100%;
+}
+
+.slider__item {
+flex: 0 0 100%;
+max-width: 100%;
+max-height: 100%;
+background-size: cover ;
+background-position: center;
+}
+
+.slider__control {
+position: absolute;
+top: 50%;
+display: none;
+align-items: center;
+justify-content: center;
+width: 40px;
+color: #fff;
+text-align: center;
+opacity: 0.5;
+height: 50px;
+transform: translateY(-50%);
+background: rgba(0, 0, 0, .5);
+}
+
+.slider__control_show {
+display: flex;
+}
+
+.slider__control:hover,
+.slider__control:focus {
+color: #fff;
+text-decoration: none;
+outline: 0;
+opacity: .9;
+}
+
+.slider__control_left {
+left: 0;
+}
+
+.slider__control_right {
+right: 0;
+}
+
+.slider__control::before {
+content: '';
+display: inline-block;
+width: 20px;
+height: 20px;
+background: transparent no-repeat center center;
+background-size: 100% 100%;
+}
+
+.slider__control_left::before {
+background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.slider__control_right::before {
+background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+.slider__item>div {
+line-height: 100px;
+font-size: 100px;
+text-align: center;
+}
+
+#header{
+ width: 51%;
+ background:white;
+ margin-left: auto;
+height: 120px; /* Высота шапки */
+margin-bottom: 5px; /* Нижний отступ шапки от остального контента */
+border-radius: 10px; /* Закругляются углы блока */
+box-shadow: rgba(0,0,0,0.5) 0px 1px 3px; /* Тень. Визуально приподнимает блок над оболочкой */
+font-color: black;
+margin-right: auto;
+margin-bottom: 10px;
+}
+ img{
+ 	float: left;
+ 	margin-right: 6px;
+ 	margin-left: 6px;
+ 	margin-top:10px;
+ 	width:300px;
+ 	height:370px;
+ 	
+ }
+ h1{ /* Заголовок сайта */
+margin-top: 20px;
+text-align: center; /* Заголовок двигается верх-вправо-вниз-влево. */
+font-size: 80px;
+font-family: 'Comforter Brush', cursive ;
+letter-spacing: 10px;
+/* Цвет заголовка */
+}
+h2{
+letter-spacing:5px;
+font-family: 'Montserrat', sans-serif;
+color: black;
+text-align: center;
+font-size: 50px;
+margin-top:40px;
+
+
+
+
+}
+h3{
+    font-family: 'Montserrat', sans-serif;
+	font-size: 30px;
+	margin-top:20px;
+	
+}
+
+#content{ 
+margin-bottom: 5px; 
+width: 49%;
+background:white;
+height: 800px;
+box-shadow: rgba(0,0,0,0.5) 0px 1px 3px;
+text-align: center;
+margin-left: auto;
+margin-right: auto;
+border-radius: 10px;
+margin-top: 10px;
+}
+
+.pic-wrap{
+	margin-top:20px;
+	border-radius: 15px;
+	background:white;
+	height:400px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight:bold;
+
+	
+}
+
+
+#footer{ 
+height:120px; 
+border-radius: 10px; 
+box-shadow: rgba(0,0,0,0.5) 0px 1px 3px; 
+margin-left: auto;
+margin-right: auto;
+background:white;
+width: 100%;
+margin-top: 50px;
+
+
+}
+ul{
+	display: inline-block;
+	
+}
+#otziv{
+    
+    border-radius:15px;
+    height:400px;
+    background:white;
+}
+.mast img{
+    width:250px;
+ 	height:320px;
+ 	
+}
+.mast p{
+    
+    font-size:20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight:bold;
+}
+
+h4{
+    
+    font-size:20px;
+    font-family: 'Montserrat', sans-serif;
+}
+.mast{
+    height: 1000px;
+    width:100%;
+    background:white;
+    border-radius:15px;
+    
+}
+
+a{
+	text-decoration: none;
+	color:black;
+	font-family: 'Montserrat', sans-serif;
+	font-weight:bold;
+}
+.foot p{
+    font-size:25px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight:bold;
+
+}
+
+.pic-wrap p{
+	font-size: 25px;
+	text-align: left;
+	background:white;
+    border-radius:15px;
+    
+	
+}
+
+
+strong img{
+	width: 50px;
+	height: 50px;
+	border-radius:40px;
+	
+}
+
+</style>
+</head>
+<body>
+
+<div id="header">
+
+
+<h1><a href="http://igorzhyx.beget.tech/"> Золушка</a> </h1>
+
+
+</div>
+
+<div id="content">
+
+<ul class="newheader">
+
+<h3><a href="uslugi.html">Услуги и цены</a></h3>
+
+</ul>
+
+<div class="slider">
+<div class="slider__wrapper">
+
+<div class="slider__item" style="height: 100%; background-image: url(images/1.jpg);">
+</div>
+<div class="slider__item" style="height: 100%; background-image: url(images/3.jpg);">
+</div>
+<div class="slider__item" style="height: 100%; background-image: url(images/d.jpg);">
+</div>
+<div class="slider__item" style="height: 100%; background-image: url(images/l.jpg);">
+</div>
+</div>
+
+<a class="slider__control slider__control_left" href="#" role="button"></a>
+<a class="slider__control slider__control_right slider__control_show" href="#" role="button"></a>
+</div>
+<script>
+'use strict';
+var multiItemSlider = (function () {
+return function (selector, config) {
+var
+_mainElement = document.querySelector(selector), // основный элемент блока
+_sliderWrapper = _mainElement.querySelector('.slider__wrapper'), // обертка для .slider-item
+_sliderItems = _mainElement.querySelectorAll('.slider__item'), // элементы (.slider-item)
+_sliderControls = _mainElement.querySelectorAll('.slider__control'), // элементы управления
+_sliderControlLeft = _mainElement.querySelector('.slider__control_left'), // кнопка "LEFT"
+_sliderControlRight = _mainElement.querySelector('.slider__control_right'), // кнопка "RIGHT"
+_wrapperWidth = parseFloat(getComputedStyle(_sliderWrapper).width), // ширина обёртки
+_itemWidth = parseFloat(getComputedStyle(_sliderItems[0]).width), // ширина одного элемента
+_positionLeftItem = 0, // позиция левого активного элемента
+_transform = 0, // значение транфсофрмации .slider_wrapper
+_step = _itemWidth / _wrapperWidth * 100, // величина шага (для трансформации)
+_items = []; // массив элементов
+// наполнение массива _items
+_sliderItems.forEach(function (item, index) {
+_items.push({ item: item, position: index, transform: 0 });
+});
+
+var position = {
+getMin: 0,
+getMax: _items.length - 1,
+}
+
+var _transformItem = function (direction) {
+if (direction === 'right') {
+if ((_positionLeftItem + _wrapperWidth / _itemWidth - 1) >= position.getMax) {
+return;
+}
+if (!_sliderControlLeft.classList.contains('slider__control_show')) {
+_sliderControlLeft.classList.add('slider__control_show');
+}
+if (_sliderControlRight.classList.contains('slider__control_show') && (_positionLeftItem + _wrapperWidth / _itemWidth) >= position.getMax) {
+_sliderControlRight.classList.remove('slider__control_show');
+}
+_positionLeftItem++;
+_transform -= _step;
+}
+if (direction === 'left') {
+if (_positionLeftItem <=
+
+position.getMin) {
+return;
+}
+if (!_sliderControlRight.classList.contains('slider__control_show')) {
+_sliderControlRight.classList.add('slider__control_show');
+}
+ 
+if (_sliderControlLeft.classList.contains('slider__control_show') && _positionLeftItem - 1 <= position.getMin) {
+_sliderControlLeft.classList.remove('slider__control_show');
+}
+_positionLeftItem--;
+_transform += _step;
+}
+_sliderWrapper.style.transform = 'translateX(' + _transform + '%)';
+}
+
+// обработчик события click для кнопок "назад" и "вперед"
+var _controlClick = function (e) {
+if (e.target.classList.contains('slider__control')) {
+e.preventDefault();
+var direction = e.target.classList.contains('slider__control_right') ? 'right' : 'left';
+_transformItem(direction);
+}
+};
+
+var _setUpListeners = function () {
+// добавление к кнопкам "назад" и "вперед" обрботчика _controlClick для событя click
+_sliderControls.forEach(function (item) {
+item.addEventListener('click', _controlClick);
+});
+}
+
+// инициализация
+_setUpListeners();
+
+return {
+right: function () { // метод right
+_transformItem('right');
+},
+left: function () { // метод left
+_transformItem('left');
+}
+}
+
+}
+}());
+
+var slider = multiItemSlider('.slider')
+
+</script>
+
+<div id="about-box">
+	<h2>О салоне</h2>
+	<div class="pic-wrap">
+		<img src="images/about-main.jpg" >
+	<p>Салон красоты является именно тем местом, в котором Вы можете положиться на опыт наших мастеров. Мастера нашего салона красоты постоянно повышают свою квалификацию, чтобы соответствовать требованиям к уровню в динамично изменяющимся тенденциям моды, чтобы быть лучшими и даже лучше лучших!
+
+<p>Держа руку на пульсе моды, мы всегда готовы предложить самые новые методики и технологии своим клиентам.
+
+Мы рады каждому нашему клиенту! У нас Вы можете провести целый день, а затем оценить результат работы наших мастеров. Отдыхая, Вы станете моложе, привлекательнее, обретете новый стиль. Подарите себе красоту, откройте в себе совершенство, а мы поможем Вам в этом!</p>
+</div>
+</div>
+<h2>Мастера</h2>
+<div class="mast">
+<ul class="masters">
+<h4>Валерия</h4><p><img src="images/9.jpg"><p> Мастер Универсал
+<h4>Елизавета</h4><p><img src="images/10.jpg"><p>Мастер Универсал</ul>
+<ul><h4>Ирэн</h4><p><img src="images/11.jpg"><p>Мастер Универсал
+<h4>Екатерина</h4><p><img src="images/8.jpg"> <p>Мастер Универсал</ul>
+<ul><h4>Алёна</h4><p><img src="images/5.jpg"><p>Мастер Универсал
+<h4>Анастасия</h4><p><img src="images/7.jpg"><p>Мастер маникюра 
+</ul>
+</div>
+
+		<h2> Отзывы</h2>
+<div id="otziv">
+	
+	<script src="https://apps.elfsight.com/p/platform.js" defer></script>
+<div class="elfsight-app-398c6e7f-f9cc-407a-87aa-6fac975bf7aa"></div>
+</div>
+<h2>Где мы находимся</h2>
+<div id="gde">
+
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2284.170499339248!2d37.523427723105044!3d47.09217342758679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e6e539b9c451a5%3A0x59b4004cf656a507!2z0JfQvtC70YPRiNC60LA!5e0!3m2!1sru!2sru!4v1653855480092!5m2!1sru!2sru" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+
+
+<div id="footer">
+	<div class="foot">
+
+<a href="http://igorzhyx.beget.tech/polit.html"> Политика обработки персональных данных <ul><p>Телефон:<br><a href="url">+7(989)615-27-08</a></ul>
+<ul><p>Почта:<br><a href="https://mail.ru/">natberd250872@mail.ru</a></ul>
+<a href=""Политика обработки персональных данных a/>
+<ul><strong><a href="https://www.instagram.com/zolushkaparikmakh"><img src="images/Instagram.png">
+</div>
+</div>
+</body>
+</html>

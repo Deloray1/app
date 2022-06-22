@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<title>Форма завки</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  
+<style>
+body{
+background: url(images/background1.jpg);
+background-size:1000%;
+ /* Меняется фон экрана, выбирается здесь */
+}
+
+
+
+#header{
+ width: 51%;
+ margin-left: auto;
+height: 120px; /* Высота шапки */
+background:white;
+margin-bottom: 5px; /* Нижний отступ шапки от остального контента */
+border-radius: 10px; /* Закругляются углы блока */
+box-shadow: rgba(0,0,0,0.5) 0px 1px 3px; /* Тень. Визуально приподнимает блок над оболочкой */
+font-color: black;
+margin-right: auto;
+margin-bottom: 10px;
+}
+ img{
+ 	float: left;
+ 	margin-right: 6px;
+ }
+h1{ /* Заголовок сайта */
+margin-top: 20px;
+text-align: center; /* Заголовок двигается верх-вправо-вниз-влево. */
+font-size: 80px;
+font-family: 'Comforter Brush', cursive ;
+letter-spacing: 10px;
+/* Цвет заголовка */
+}
+h2{
+	font-family: 'Montserrat', sans-serif;
+color: black;
+text-align: center;
+font-size: 50px;
+margin-bottom: 10px;
+
+
+}
+
+
+
+
+/* Контент (статья) */
+
+#content{ /* Блок контента */
+margin-bottom: 5px; /* Отступ блока статьи от блока подвала */
+width: 50%;
+height: 700px;
+padding: 10px; /* Отступ текста от краёв блока */
+background:white;
+box-shadow: rgba(0,0,0,0.5) 0px 1px 3px;
+text-align: center;
+margin-left: auto;
+margin-right: auto;
+border-radius: 10px;
+
+}
+
+
+#footer{ /* Блок подвала */
+height:120px; 
+border-radius: 10px; 
+box-shadow: rgba(0,0,0,0.5) 0px 1px 3px; 
+margin-left: auto;
+margin-right: auto;
+background:white;
+width: 51%;
+margin-top: 50px;
+
+}
+.foot a{
+	font-family: 'Montserrat', sans-serif;
+	text-decoration: none;
+	color:black;
+
+
+}
+
+ul{
+	display: inline-block;
+	
+}
+
+ul.newheader{
+margin-top: -30px;
+
+}
+ul.newheader li{
+display: inline; /* Отображать как строчный элемент */
+margin-right: 5px; /* Отступ слева */
+border: 1px solid #000; /* Рамка вокруг текста */
+padding: 3px;
+text-decoration: none;
+
+}
+.foot ul{
+	margin-top: -40px;
+}
+p{
+	font-size: 25px;
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+}
+a{
+	text-decoration: none;
+	font-family: 'Montserrat', sans-serif;
+	color:black;
+	font-weight: bold;
+}
+strong img{
+	width: 40px;
+	height: 40px;
+	
+}
+
+#btn{
+	width: 200px;
+	height: 100px;
+	font-size: 30px;
+	font-family: 'Montserrat', sans-serif;
+	border-radius: 20px;
+	background:white;
+	margin-left:46%;
+	margin-top:20px;
+	font-weight:bold;
+
+}
+strong img{
+	width:50px;
+	height:50px; 
+	margin-top: 60px;
+	border-radius:40px;
+}	
+input{
+	width: 400px;
+	height: 50px;
+	border-radius: 20px;
+}
+</style>
+</head>
+<body>
+<div id="header">
+
+
+<h1><a href="http://igorzhyx.beget.tech/"> Золушка</a> </h1>
+
+
+</div>
+<h2>Заполните форму</h2>
+<div id="content">
+
+
+<form method="POST"  id="ajax_form" action=""  >
+    <article>
+    <div class="cent">
+    <br><p>
+    <label for="mail"> Введите E-mail</label> <p><input type="text" name = "mail" required class="mail"/> <br><br>
+    <label for="FIO"> ФИО</label><p> <input type="text" name="name" /><br><br>
+    <label for="tf">Телефон</label><p> <input type="text" name="user_phone" /> <br> <br>
+    <label for="oblast">Выберите мастера и услугу</label><p><input type="text" name="vibor" /> <br> 
+	
+	
+	<br>
+    
+    </div>
+    </article>
+    </form>
+</div>
+<input type="button"  id="btn" value="Отправить"/>
+     <div id="result_form"></div> 
+</div>
+</div>
+<div id="footer">
+	<div class="foot">
+
+<a href="http://igorzhyx.beget.tech/polit.html"> Политика обработки персональных данных<ul><p>Телефон:<br> <a href="url">+7(989)615-27-08</a></ul>
+<ul><p>E-mail:<br><a href="https://mail.ru/">natberd250872@mail.ru</a></ul>
+<ul><strong><a href="https://www.instagram.com/zolushkaparikmakh"><img src="images/Instagram.png">
+</div>
+</div>
+<script src="ajax.js"></script>
+</body>
+</html>
